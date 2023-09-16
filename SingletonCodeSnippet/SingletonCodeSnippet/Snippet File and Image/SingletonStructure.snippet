@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Singleton Snippet</Title>
+      <Shortcut>singleton</Shortcut>        <!-- In our compiler, we write a shortcut of how we want to call this line of code. -->
+    <Author>Emre Ermin</Author>
+    <Description>You can quickly create singleton structure</Description>       
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">              <!-- Write the block or line of code you want to write here -->
+        <![CDATA[ public class $singleton_name$           
+{
+    private static $singleton_name$ instance;
+    
+    private $singleton_name$()
+    {
+        // Constructor logic here
+    }
+
+    public static $singleton_name$ Instance               
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = new $singleton_name$();
+            }
+            return instance;
+        }
+    }
+} ]]>
+      </Code>
+      <Imports>
+        <Import>
+          <Namespace>System.IO</Namespace>
+        </Import>
+      </Imports>
+       <Declarations>
+    <Literal>
+      <ID>singleton_name</ID>               <!-- Here, you are giving a variable that can be changed according to its ID value. If you want, you can give the variable a default value. -->
+      <ToolTip>Singleton</ToolTip>
+      <Default>singleton_name</Default>
+    </Literal>
+  </Declarations>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">
+        Singleton Code Snippet
+    </h1>
+   
+
+    <!-- //I pasted the code here to print it on the index page :) -->
+    <p>
+        public class $singleton_name$
+        {
+        private static $singleton_name$ instance;
+
+        private $singleton_name$()
+        {
+        // Constructor logic here
+        }
+
+        public static $singleton_name$ Instance
+        {
+        get
+        {
+        if (instance == null)
+        {
+        instance = new $singleton_name$();
+        }
+        return instance;
+        }
+        }
+        }
+    </p>
+    
+</div>
